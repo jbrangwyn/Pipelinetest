@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: jbrangwynpipelinetest 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: jbrangwynpipelinetest 
+    spec:
+      containers:
+        - name: jbrangwynpipelinetest 
+          image: jbkb8cr.azurecr.io/jbrangwynpipelinetest
+          ports:
+          - containerPort: 8080
