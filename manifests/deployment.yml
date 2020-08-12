@@ -3,6 +3,8 @@ kind: Deployment
 metadata:
   name: jbrangwynpipelinetest 
 spec:
+selector:
+      name: jbrangwynpipelinetest
   replicas: 1
   template:
     metadata:
