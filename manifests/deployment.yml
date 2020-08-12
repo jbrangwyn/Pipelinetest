@@ -1,15 +1,16 @@
-apiVersion : apps/v1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: jbrangwynpipelinetest 
 spec:
-selector:
-      name: jbrangwynpipelinetest
   replicas: 1
+  selector:
+    matchLabels:
+      app: jbrangwynpipelinetest
   template:
     metadata:
       labels:
-        app: jbrangwynpipelinetest 
+        app: jbrangwynpipelinetest
     spec:
       containers:
         - name: jbrangwynpipelinetest 
